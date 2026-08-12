@@ -4,6 +4,33 @@ import { addComment, deleteComment, listComments, updateComment } from "./api/co
 import CommentCard from "./components/CommentCard";
 import AddCommentForm from "./components/AddCommentForm";
 import "./App.css";
+import comments_threaded from "../../comments_threaded.json";
+
+// 1
+// | - 2 
+//     | - 3
+// | - 4
+// 5
+// | - 6 
+
+//Map<parentid, [children comments]> 
+// 1. parentid = null , continue
+// 2. find comment.arentid in not map, set item -> 1:[2]
+// 3. 2: [3]
+// 4. found the parentId in the map, add itself to the list 1: [2,4]
+
+function childrenMap(comments: Comment[]): Map<string, Comment[]> {
+  const map = new Map<string, Comment[]>();
+
+  for (const comment of comments) {
+    if (comment.parent === null) {continue;}
+    if (map.has(comment.parent)) {map.get(comment.parent)?.push(comment);} else {
+      map.set(comment.parent, [comment]);
+    }
+  }
+return map;
+}
+
 
 function App() {
   const [comments, setComments] = useState<Comment[]>([]);
@@ -27,12 +54,14 @@ function App() {
     setComments(comments.filter((c) => c.id !== id));
   }
 
+  const children = childrenMap(comments);
+  const topComments = comments.filter((c) => c.parent === "")
   return (
     <main className="page">
       <h1>Bobyard Comments</h1>
       <AddCommentForm onAdd={handleAdd} />
-      {comments.map((c) => (
-        <CommentCard key={c.id} comment={c} onEdit={handleEdit} onDelete={handleDelete} />
+      {topComments.map((c) => (
+        <CommentCard key={c.id} comment={c} childrenMap= {children} onEdit={handleEdit} onDelete={handleDelete} />
       ))}
     </main>
   );

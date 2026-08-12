@@ -1,5 +1,6 @@
 export interface Comment {
     id: number;
+    parent: string;
     author: string;
     text: string;
     date: string;

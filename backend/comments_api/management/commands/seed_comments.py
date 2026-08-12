@@ -23,6 +23,7 @@ class Command(BaseCommand):
 
         for item in data["comments"]:
             Comment.objects.create(
+                parent=item["parent"],
                 author=item["author"],
                 text=item["text"],
                 date=item["date"],
