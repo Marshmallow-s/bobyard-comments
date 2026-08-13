@@ -4,7 +4,7 @@ from django.core.management.base import BaseCommand
 from comments_api.models import Comment
 
 class Command(BaseCommand):
-    help = "Load comments.json into the database, preserving original timestamps."
+    help = "Load comments_threaded.json into the database, preserving original timestamps."
     
     def add_arguments(self, parser):
         parser.add_argument(
@@ -17,12 +17,13 @@ class Command(BaseCommand):
         if options["flush"]:
             Comment.objects.all().delete()
 
-        json_path = Path("comments.json")
+        json_path = Path("comments_threaded.json")
         with open(json_path) as f:
             data = json.load(f)
 
         for item in data["comments"]:
             Comment.objects.create(
+                id=int(item["id"]),
                 parent=item["parent"],
                 author=item["author"],
                 text=item["text"],

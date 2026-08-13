@@ -4,7 +4,6 @@ import { addComment, deleteComment, listComments, updateComment } from "./api/co
 import CommentCard from "./components/CommentCard";
 import AddCommentForm from "./components/AddCommentForm";
 import "./App.css";
-import comments_threaded from "../../comments_threaded.json";
 
 // 1
 // | - 2 
@@ -23,7 +22,7 @@ function childrenMap(comments: Comment[]): Map<string, Comment[]> {
   const map = new Map<string, Comment[]>();
 
   for (const comment of comments) {
-    if (comment.parent === null) {continue;}
+    if (comment.parent === "") {continue;}
     if (map.has(comment.parent)) {map.get(comment.parent)?.push(comment);} else {
       map.set(comment.parent, [comment]);
     }
