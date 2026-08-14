@@ -1,0 +1,130 @@
+{
+    "comments": [
+        {
+            "id": "1",
+            "user_id": "u_07",
+            "author": "Alex Chen",
+            "text": "First! Been waiting for this feature.",
+            "date": "2026-08-01T09:15:00Z",
+            "likes": 0,
+            "image": ""
+        },
+        {
+            "id": "2",
+            "user_id": "u_03",
+            "author": "Maya Patel",
+            "text": "Great writeup. The section on tradeoffs was especially clear.",
+            "date": "2026-08-09T18:30:12Z",
+            "likes": 7,
+            "image": "https://miro.medium.com/v2/resize:fit:2000/1*HkM78Z1G5UKqQNCHwBHRfA.png"
+        },
+        {
+            "id": "3",
+            "user_id": "u_12",
+            "author": "Alex Chen",
+            "text": "Note: I'm a different Alex Chen than the one above :)",
+            "date": "2026-08-03T11:02:44Z",
+            "likes": 0,
+            "image": ""
+        },
+        {
+            "id": "4",
+            "user_id": "u_09",
+            "author": "Émilie Fournier",
+            "text": "Merci ! Ça marche très bien chez moi.",
+            "date": "2026-08-10T14:23:05Z",
+            "likes": 3,
+            "image": ""
+        },
+        {
+            "id": "5",
+            "user_id": "u_07",
+            "author": "Alex Chen",
+            "text": "Posting at the exact same second as Émilie — tiebreak test.",
+            "date": "2026-08-10T14:23:05Z",
+            "likes": 12,
+            "image": ""
+        },
+        {
+            "id": "6",
+            "user_id": "u_21",
+            "author": "Sam O'Neal",
+            "text": "Can't agree more — this saved my week. \"Highly\" recommend.",
+            "date": "2026-08-02T07:45:59Z",
+            "likes": 7,
+            "image": ""
+        },
+        {
+            "id": "7",
+            "user_id": "u_03",
+            "author": "Maya Patel",
+            "text": "Following up on my earlier comment: still holds up.",
+            "date": "2026-08-11T21:05:33Z",
+            "likes": 0,
+            "image": ""
+        },
+        {
+            "id": "8",
+            "user_id": "u_12",
+            "author": "Alex Chen",
+            "text": "Three of us are tied at 7 likes. Who wins the tiebreak?",
+            "date": "2026-08-05T16:40:21Z",
+            "likes": 7,
+            "image": ""
+        },
+        {
+            "id": "9",
+            "user_id": "u_07",
+            "author": "Alex Chen",
+            "text": "Same likes AND same timestamp as the next one. Only id can break this tie.",
+            "date": "2026-08-12T08:59:10Z",
+            "likes": 3,
+            "image": ""
+        },
+        {
+            "id": "10",
+            "user_id": "u_09",
+            "author": "Émilie Fournier",
+            "text": "Confirmed — identical likes and timestamp with comment 9.",
+            "date": "2026-08-12T08:59:10Z",
+            "likes": 3,
+            "image": ""
+        },
+        {
+            "id": "11",
+            "user_id": "u_21",
+            "author": "Sam O'Neal",
+            "text": "Midday exactly. Round-number timestamp edge.",
+            "date": "2026-08-04T12:00:00Z",
+            "likes": 0,
+            "image": ""
+        },
+        {
+            "id": "12",
+            "user_id": "u_03",
+            "author": "Maya Patel",
+            "text": "This is the top comment by likes — but not the newest. 🏆",
+            "date": "2026-08-07T23:59:59Z",
+            "likes": 25,
+            "image": "https://avatars.githubusercontent.com/u/13966722?s=200&v=4"
+        },
+        {
+            "id": "13",
+            "user_id": "u_12",
+            "author": "Alex Chen",
+            "text": "测试一下中文评论的编码,从 seed 到数据库到前端。",
+            "date": "2026-08-06T10:10:10Z",
+            "likes": 0,
+            "image": ""
+        },
+        {
+            "id": "14",
+            "user_id": "u_07",
+            "author": "Alex Chen",
+            "text": "Late-night post, zero likes, id higher than everything older.",
+            "date": "2026-08-08T03:33:33Z",
+            "likes": 0,
+            "image": ""
+        }
+    ]
+}

@@ -5,6 +5,29 @@
   font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  margin: 8px 0 4px;
+}
+
+.sort-label {
+  color: #737373;
+  font-size: 13px;
+}
+
+.sort-select {
+  font: inherit;
+  font-size: 13px;
+  padding: 4px 8px;
+  border: 1px solid #d4d4d4;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+}
+
 .comment-card {
   display: flex;
   gap: 12px;
